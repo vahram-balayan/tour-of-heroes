@@ -1,0 +1,6 @@
+<h2>My Heroes</h2>
+<ul class="heros">
+  <li *ngFor="let item of heroes; let i = index;">
+    <span *ngIf="i % 2 == 1" class="badge"> {{i}} {{item.id}}  {{item.name}}</span>
+  </li>
+</ul>
