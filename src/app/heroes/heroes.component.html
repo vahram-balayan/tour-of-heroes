@@ -1,6 +1,9 @@
 <h2>My Heroes</h2>
-<ul class="heros">
-  <li *ngFor="let item of heroes; let i = index;">
-    <span *ngIf="i % 2 == 1" class="badge"> {{i}} {{item.id}}  {{item.name}}</span>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
   </li>
 </ul>
+
